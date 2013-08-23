@@ -15,6 +15,67 @@ QUIZ_TOPICS = ["ruby", "rspec", "testing", "arrays", "objects"]
 # quiz.add(5)
 # quiz.add(3)
 
+class Quiz
+  # attr_accessor :num
+  def initialize
+    @num = []
+    @others = []
+  end
+
+  def add(num)
+    if (num.class == Fixnum)
+      @num << num
+    elsif (num.class == Array)
+      num.each do |element|
+        if (element.class == Fixnum)
+          @num << element
+        else
+          @others << element
+        end
+      end
+    else
+      @others << num
+    end
+    return @num
+  end
+
+  def numbers
+    return @num.to_s()
+  end
+
+  def trash
+    return @others
+  end
+
+  def count(specified_num)
+    occurence = 0
+    @num.each do |element|
+      if element == specified_num
+        occurence += 1
+      end
+    end
+    return occurence
+  end
+
+  def rotate(rotate_num)
+    rotate_num.times do
+      front = @num.shift
+      @num << front
+    end
+    return @num
+  end
+
+  def count_evens
+    number_of_evens = 0
+    @num.each do |element|
+      if element.even?
+        number_of_evens += 1
+      end
+    end
+    return number_of_evens
+  end
+end
+
 # We can see the numbers we've added
 # quiz.numbers => "[5, 3]"
 
