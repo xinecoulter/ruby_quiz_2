@@ -1,4 +1,4 @@
-![image](https://travis-ci.org/phlco/ruby_quiz.png)
+![image](https://travis-ci.org/phlco/ruby_quiz_2.png)
 # This is a quiz on ruby and writing tests!
 
 Please see `quiz_spec.rb` and `quiz.rb`.
