@@ -7,7 +7,7 @@ require_relative '../quiz'
 #  \______/   \______| |__|  |__|
 
 describe "a quiz" do
-  it "should cover Ruby and Testing in Rspec" do
+  it "should be about Ruby and Testing in Rspec" do
     expect(QUIZ_TOPICS).to include("ruby")
     expect(QUIZ_TOPICS).to include("rspec")
     expect(QUIZ_TOPICS).to include("testing")
